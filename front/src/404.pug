@@ -1,0 +1,35 @@
+extends templates/layouts/default
+
+block variables
+
+  - var pageTitle = "Ошибка 404";
+
+block description
+
+  meta(name="author" content="Abraklion")
+  meta(name="description" content="Страница не найдена. Ошибка 404")
+
+block link
+
+  link(rel="stylesheet" href="assets/css/style.min.css")
+
+block script
+
+block content
+
+  .main
+
+    //- Шапка
+    include templates/partials/burger
+
+    //- Шапка
+    include templates/partials/header404
+
+    .gag
+      .container
+        .gag__inner
+
+          h1.gag__title Страница не найдена
+          .gag__number 4#[sub 0]4
+          p.gag__text Возможно, она была удалена или адрес #[br] был указан неверно.
+          a(href="/").gag__button.button На главную

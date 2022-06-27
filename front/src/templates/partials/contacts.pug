@@ -1,0 +1,34 @@
+
+section.contacts#contacts
+  .container
+    .contacts__inner
+
+      h2.contacts__title.title
+        span= jsonContacts.title
+
+      .contacts__row
+        .contacts__column
+          .contacts__subtitle= jsonContacts.contact.title
+          p.contacts__text= jsonContacts.contact.subtitle
+          ul.contacts__socials
+            each item in jsonContacts.contact.list
+              li.contacts__item
+                svg(aria-hidden="true", width="30", height="30").contacts__svg
+                  use(xlink:href="assets/img/sprite.svg#" + item.icon)
+                a(href=item.link).contacts__link= item.name
+        .contacts__column
+          .contacts__subtitle= jsonContacts.form.title
+          form(method="POST", action="/").contacts__form.form.js-form
+            .form__element
+              label(for="name").visually-hidden= jsonContacts.form.name
+              input(id="name", type="text", name="name", maxlength="20", placeholder=jsonContacts.form.name, required).form__input
+            .form__element
+              label(for="email").visually-hidden= jsonContacts.form.email
+              input(id="email", type="email", name="email", maxlength="40", placeholder=jsonContacts.form.email, required).form__input
+            .form__element
+              label(for="messages").visually-hidden= jsonContacts.form.messages
+              textarea(id="messages", name="message", minlength="5", maxlength="1000", placeholder=jsonContacts.form.messages, spellcheck, required).form__textarea
+            .form__element
+              button(type="submit", name="btn-form").form__button.button Отправить
+
+// /.contacts

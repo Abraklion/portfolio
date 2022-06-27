@@ -1,0 +1,134 @@
+
+.form{
+  display: grid;
+  grid-template-rows: repeat(4,auto);
+  row-gap: 18px;
+
+  @media (min-width: $viewport-md) {
+    row-gap: 20px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    row-gap: 23px;
+  }
+}
+
+.form__element {
+  display: flex;
+}
+
+.form__input {
+  flex: 1 1 auto;
+
+  padding: 12px;
+
+  background-color: transparent;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: 'Rubik', sans-serif;
+
+  color: $color-contacts;
+
+  border: 1px solid rgba($color-contacts, 0.3);
+
+  transition: border 0.3s ease, color 0.3s ease, background-color 0.1s ease;
+
+  &::selection{
+    background-color: rgba($bgTextCopy,0.15);
+
+    color: lighten($colorTextCopy,15%);
+  }
+
+  &::placeholder{
+    color: rgba($color-contacts,0.3);
+
+    user-select: $blockText;
+  }
+
+  &:focus{
+    outline: none;
+
+    border: 1px solid rgba($color-contacts, 0.8);
+
+    &::placeholder{
+      color:  rgba($color-contacts,0.5);
+    }
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding: 14px;
+  }
+
+  &--error{
+    background-color: rgba($primary,0.05);
+
+    border: 1px solid rgba($secondary,0.9);
+  }
+}
+
+.form__textarea {
+  flex: 1 1 auto;
+
+  height: 120px;
+
+  padding: 12px;
+
+  background-color: transparent;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: 'Rubik', sans-serif;
+
+  color: $color-contacts;
+
+  border: 1px solid rgba($color-contacts, 0.3);
+
+  transition: border 0.3s ease, color 0.3s ease, background-color 0.1s ease;
+
+  resize: none;
+
+  &::selection{
+    background-color: rgba($bgTextCopy,0.15);
+
+    color: lighten($colorTextCopy,15%);
+  }
+
+  &::placeholder{
+    color: rgba($color-contacts,0.3);
+
+    user-select: $blockText;
+  }
+
+  &:focus{
+    outline: none;
+
+    border: 1px solid rgba($color-contacts, 0.8);
+
+    &::placeholder{
+      color:  rgba($color-contacts,0.5);
+    }
+  }
+
+  @media (min-width: $viewport-md) {
+    height: 140px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding: 14px;
+  }
+
+  &--error{
+    background-color: rgba($primary,0.05);
+
+    border: 1px solid rgba($secondary,0.9);
+  }
+}
+
+.form__button {
+  padding: 12px 31px;
+}

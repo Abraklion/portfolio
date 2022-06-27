@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@import "variables";
+@import "function";
+@import "mixins";
+
+/* Fonts */
+@import "fonts";
+
+// Normalize.css
+@import "normalize";  // normalize / reset
+
+/* Default styles */
+@import "core";
+
+/* Animation */
+@import "animations";
+
+/* Blocks */
+@import "blocks/container";
+@import "blocks/main";
+@import "blocks/logo";
+@import "blocks/button";
+@import "blocks/title";
+@import "blocks/slider-bar";
+@import "blocks/card";
+@import "blocks/more";
+@import "blocks/element";
+@import "blocks/form";
+@import "blocks/menu";
+@import "blocks/burger";
+@import "blocks/loader";
+@import "blocks/answer";
+@import "blocks/header";
+@import "blocks/info";
+@import "blocks/biography";
+@import "blocks/portfolio";
+@import "blocks/skills";
+@import "blocks/contacts";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/gag";
+@import "blocks/up";
+
+/* Vendor libs */
+@import "vendor/slick";

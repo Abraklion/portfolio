@@ -1,0 +1,130 @@
+
+.card {
+  background-color: $bg-card;
+
+  border: 2px solid rgba($border-card,0.7);
+
+  user-select: $blockText;
+}
+
+.card__header {
+
+  @media (min-width: $viewport-lg) {
+    position: relative;
+  }
+}
+
+.card__images {
+  height: 190px;
+
+  position: relative;
+
+  box-shadow: inset 0 0 20px rgba($shadow-card,$opacity-shadow-card);
+
+  @media (min-width: $viewport-sm) {
+    height: 260px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    transform-origin: 50% 0;
+    transform: perspective(1500px) rotateX(0) translateY(0);
+
+    transition: transform 0.8s ease 0.8s;
+  }
+}
+
+.card__img {
+  display: block;
+
+  height: 100%;
+
+  margin: 0 auto;
+}
+
+.card__category {
+  min-width: 70px;
+
+  position: absolute;
+  top: 20px;
+  right: 0;
+
+  padding: 3px 0;
+
+  background-color: $bg-die-card;
+
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+
+  color: rgba($color-die-text,$opacity-die-text);
+
+  text-transform: lowercase;
+  text-align: center;
+
+  border-left: 1px solid $border-die-card;
+  border-top: 1px solid $border-die-card;
+  border-bottom: 1px solid $border-die-card;
+}
+
+.card__footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  line-height: 18px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  border-top: 2px solid rgba($border-card,0.7);
+  box-shadow: inset 0 0 20px rgba($shadow-card, $opacity-shadow-card);
+}
+
+.card__link {
+  display: block;
+
+  padding: 12px 0;
+
+  background-color: transparent;
+
+  color: rgba($color-link-card,$opacity-link-card);
+
+  text-decoration: none;
+
+  box-shadow: none;
+
+  outline-width: 0;
+
+  transition: box-shadow 0.3s ease, background-color 0.2s ease;
+
+  &:first-child {
+    border-right: 1px solid rgba($border-card,0.7);
+  }
+
+  &:hover{
+    box-shadow: inset 0 0 2px 3px rgba($color-link-card-hover, 1);
+    background-color: rgba($color-link-card-hover, $opacity-link-card-hoverBG);
+  }
+
+  &:focus{
+    outline-offset: -2px;
+  }
+
+  &:active{
+    color: rgba($white, 0.6);
+  }
+
+  @media (min-width: $viewport-sm) {
+    padding: 15px 0;
+
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    outline-width: 1px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding: 17px 0;
+  }
+}

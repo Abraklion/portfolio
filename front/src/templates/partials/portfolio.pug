@@ -1,0 +1,24 @@
+
+section.portfolio#portfolio
+  .container
+    .portfolio__inner
+
+      h2.portfolio__title.title
+        span= jsonPortfolio.title
+
+      ul.portfolio__tab
+        each item in jsonPortfolio.tab
+          li.portfolio__tab-item
+            if item.active
+              a(href="", data-tab= item.name, tabindex="-1", class=`portfolio__tab-link ${item.active}`)= item.name
+            else
+              a(href="", data-tab= item.name).portfolio__tab-link= item.name
+
+      ul.portfolio__list
+        li.portfolio__item.portfolio__item--hide
+          .more
+            .more__title= jsonPortfolio.still.title
+            .more__text= jsonPortfolio.still.subtitle
+            button(type="button").more__button.button.button--more.js-more__button= jsonPortfolio.still.btn
+
+// /.portfolio

@@ -1,0 +1,17 @@
+
+header.header#header
+
+  //- логотип
+  a(href="index.html", aria-label="Логотип Кузнецов Николай").header__logo.logo
+
+  nav.header__navigation
+    //- меню
+    ul.header__menu.menu
+      //- Цикл из dataHeader
+      each item in jsonHeader.menu
+        li.menu__item
+          a(href=item.link, aria-label=item.name).menu__link
+            svg(aria-hidden="true", width="27", height="27").menu__svg
+              use(xlink:href="assets/img/sprite.svg#" + item.icon)
+
+// /.header

@@ -1,0 +1,21 @@
+{
+  "copyright" : "© 2021, Все права защищены.",
+
+  "social" : [
+    {
+      "name" : "Telegram",
+      "link" : "https://t.me/Abraklion",
+      "icon" : "telegram-f"
+    },
+    {
+      "name" : "Skype",
+      "link" : "https://join.skype.com/invite/AIsydf8dZAZ0",
+      "icon" : "skype-f"
+    },
+    {
+      "name" : "Github",
+      "link" : "https://github.com/Abraklion",
+      "icon" : "github-f"
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+
+.biography {
+  background-color: $bg-biography;
+
+  box-shadow: inset 0 4px 4px rgba($bg-footer-shadow, $opacity-footer-shadow),
+  inset 0 -4px 4px rgba($bg-footer-shadow, $opacity-footer-shadow);
+
+  &::before{
+    content: "";
+
+    margin-top: 1px;
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $bg-footer-shadow;
+  }
+
+  &::after{
+    content: "";
+
+    margin-bottom: 1px;
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $bg-footer-shadow;
+  }
+}
+
+.biography__inner {
+  padding: 40px 0;
+
+  @media (min-width: $viewport-sm) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $viewport-md) {
+    padding: 70px 0;
+  }
+
+  @media (min-width: $viewport-lg) {
+    display: grid;
+    grid-template-columns: auto 534px;
+    grid-template-rows: auto auto;
+    column-gap: 70px;
+
+    padding: 75px 0;
+  }
+
+  @media (min-width: $viewport-xl) {
+    grid-template-columns: auto 650px;
+    align-content: start;
+    column-gap: 95px;
+
+    padding: 95px 0;
+  }
+}
+
+.biography__title {
+  margin: 0 0 40px 0;
+
+  @media (min-width: $viewport-sm) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $viewport-md) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    grid-column: 2 / 3;
+
+    align-self: start;
+
+    margin-bottom: 35px;
+  }
+}
+
+.biography__info {
+  user-select: $blockText;
+
+  @media (min-width: $viewport-lg) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+}
+
+.biography__info-box {
+  max-width: 356px;
+  max-height: 356px;
+
+  position: relative;
+
+  margin: 0 auto 30px auto;
+
+  @media (min-width: $viewport-sm) {
+    margin-bottom: 40px;
+  }
+}
+
+.biography__img {
+
+  img {
+    display: block;
+
+    border: 5px solid $border-biography;
+    border-radius: 50%;
+
+    opacity: 0.9;
+    filter: brightness(90%);
+
+    @media (min-width: $viewport-xl) {
+      filter: brightness(100%);
+    }
+  }
+}
+
+.biography__social {
+  @include list();
+
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  right: 0;
+}
+
+.biography__social-item {
+  position: relative;
+
+  &:nth-child(1){
+    top: -15px;
+
+    @media (min-width: $viewport-sm) {
+      top: -17px;
+    }
+  }
+
+  &:nth-child(4){
+    top: -15px;
+
+    @media (min-width: $viewport-sm) {
+      top: -17px;
+    }
+  }
+}
+
+.biography__social-link {
+  display: flex;
+
+  width: 35px;
+  height: 35px;
+
+  position: relative;
+
+  margin: 0 8px;
+
+  background-color: $bg-border-social;
+
+  color: $color-social-icon;
+
+  border: 2px solid $border-social;
+  border-radius: 50%;
+
+  transform: scale(1);
+  transition: transform 0.3s ease, background-color 0.1s linear;
+
+  &:hover{
+    transform: scale(1.1);
+
+    background-color: $bg-border-social-hover;
+  }
+
+  &:focus{
+    background-color: $bg-border-social-hover;
+
+    transform: scale(1.1);
+  }
+
+  @media (min-width: $viewport-sm) {
+    margin: 0 10px;
+  }
+}
+
+.biography__social-svg {
+  width: 15px;
+  height: 15px;
+
+  margin: auto;
+
+  fill: currentColor;
+}
+
+.biography__profession {
+  margin: 0 0 18px 0;
+
+  font-size: 16px;
+  line-height: 16px;
+
+  text-align: center;
+
+  color: rgba($color-text-biography,$opacity-text-biography);
+
+  @media (min-width: $viewport-md) {
+    margin-bottom: 20px;
+  }
+}
+
+.biography__name {
+  margin: 0 0 20px 0;
+
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 31px;
+
+  text-align: center;
+
+  @media (min-width: $viewport-sm) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $viewport-md) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    margin-bottom: 0;
+  }
+}
+
+.biography__description {
+
+}
+
+.biography__text {
+  margin: 0 0 15px 0;
+
+  font-weight: 300;
+
+  color: rgba($color-text-biography,$opacity-text-biography);
+
+  &::selection{
+    background-color: rgba($bgTextCopy,0.15);
+
+    color: lighten($colorTextCopy,15%);
+  }
+
+  span {
+    font-weight: 400;
+
+    color: $color-fact;
+
+    &::selection{
+      background-color: rgba($bgTextCopy,0.15);
+
+      color: lighten($colorTextCopy,5%);
+    }
+  }
+
+  @media (min-width: $viewport-md) {
+    margin-bottom: 20px;
+
+    font-size: 16px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    margin-bottom: 25px;
+  }
+
+}
+
+.biography__list {
+  @include list();
+
+  @media (min-width: $viewport-sm) {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+
+    margin-top: 30px;
+  }
+
+  @media (min-width: $viewport-md) {
+    grid-template-columns: auto auto;
+    grid-column-gap: 90px;
+    justify-content: start;
+
+    margin-top: 40px;
+
+    font-size: 16px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    grid-column-gap: 40px;
+
+    margin-top: 30px;
+
+    font-size: 15px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    margin-top: 38px;
+  }
+}
+
+.biography__item {
+  font-weight: 300;
+
+  margin: 0 0 3px 0;
+
+  color: rgba($color-text-biography,$opacity-text-biography);
+
+  &::selection{
+    background-color: rgba($bgTextCopy,0.15);
+
+    color: lighten($colorTextCopy,15%);
+  }
+
+  &:nth-child(4){
+    margin-bottom: 0;
+  }
+
+  b {
+    margin: 0 4px 0 0;
+
+    font-weight: 500;
+
+    color: rgba($color-text-biography,1);
+
+    &::selection{
+      background-color: rgba($bgTextCopy,0.15);
+
+      color: lighten($colorTextCopy,5%);
+    }
+  }
+
+  a {
+    color: rgba($color-text-biography,$opacity-text-biography);
+
+    text-decoration: none;
+
+    &::selection{
+      background-color: rgba($bgTextCopy,0.15);
+
+      color: lighten($colorTextCopy,15%);
+    }
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: $viewport-sm) {
+
+    &:nth-child(1){
+      order: 1;
+    }
+
+    &:nth-child(2){
+      order: 3;
+
+      margin-bottom: 0;
+    }
+
+    &:nth-child(3){
+      order: 2;
+    }
+
+    &:nth-child(4){
+      order: 4;
+    }
+  }
+
+  @media (min-width: $viewport-lg) {
+    margin-bottom: 7px;
+  }
+}

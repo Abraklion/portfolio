@@ -1,0 +1,78 @@
+
+.button{
+  user-select: none;
+
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  padding: 13px 33px;
+
+  background-color: $bg-button;
+
+  border: 1px solid $border-button;
+  border-radius: 5px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Rubik", sans-serif;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: $text-button;
+
+  cursor: pointer;
+
+  transform: translateY(0);
+
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+  &:hover{
+    outline-width: 0;
+
+    @media (min-width: $viewport-lg) {
+      outline-width: initial;
+
+      background-color: $bg-button-hover;
+
+      color: $text-button-hover;
+
+      transform: translateY(-2px);
+
+    }
+  }
+
+  &:focus{
+    outline-width: 0;
+
+    @media (min-width: $viewport-lg) {
+      outline-width: initial;
+    }
+  }
+
+  &--more{
+    padding: 5px 10px;
+
+    background-color: rgba($bg-button,0.8);
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    text-transform: uppercase;
+
+    border: 1px solid rgba($bg-button,0.8);
+
+    color: rgba($text-button,0.8);
+
+    @media (min-width: $viewport-lg) {
+      padding-top: 7px;
+      padding-bottom: 7px;
+
+      border-radius: 0;
+    }
+  }
+}

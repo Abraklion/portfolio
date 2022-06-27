@@ -1,0 +1,65 @@
+
+.slider-bar{
+  width: 80px;
+  height: 20px;
+
+  position: relative;
+
+  background-color: $bg-color-slider-bar;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 0 2px #6d6d70;
+
+  cursor: pointer;
+
+  &:focus{
+    outline-width: 0;
+  }
+
+  @media (min-width: $viewport-lg) {
+
+    &:focus{
+      outline-width: initial;
+    }
+  }
+
+  &--destroy{
+    background-color: lighten($bg-color-slider-bar,15%);
+
+    .slider-bar__toggle{
+      right: calc(100% - 2% - 40px);
+    }
+
+  }
+
+  &--off{
+    background-color: lighten($bg-color-slider-bar,15%);
+
+    cursor: not-allowed;
+
+    .slider-bar__toggle{
+      left: 2%;
+    }
+
+
+  }
+
+}
+
+.slider-bar__toggle{
+  width: 40px;
+  height: 16px;
+
+  position: absolute;
+  top: 50%;
+  right: 2%;
+
+  border-radius: 8px;
+
+  background-color: $color-primary;
+
+  transform: translate(0,-50%);
+  transition: right 0.3s ease;
+
+}

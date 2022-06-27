@@ -1,0 +1,11 @@
+section.info#info
+  .container
+    h2.visually-hidden= jsonInfo.title
+    .info__inner
+      p.info__greetings= jsonInfo.greetings
+      p.info__name= jsonInfo.name
+      p.info__profession= jsonInfo.profession
+      p.info__slogan= jsonInfo.slogan
+      a(href="#contacts").info__button.button= jsonInfo.btn
+
+// /.info

@@ -1,0 +1,60 @@
+extends templates/layouts/default
+
+block variables
+
+  - var pageTitle = "Портфолио Кузнецова Николая | Front-End разработчик.";
+
+block description
+
+  meta(name="author" content="Abraklion")
+  meta(name="description" content="Проектирую и разрабатываю эффективные, семантические, доступные, адаптивные, оптимизированные веб-сайты используя лучшие практики.")
+
+block link
+
+  link(rel="stylesheet" href="assets/css/style.min.css")
+
+block script
+
+  script(async src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js")
+  script(defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+  script(defer src="assets/js/app.min.js")
+
+block content
+
+  .main
+
+    //- Бургер
+    include templates/partials/burger
+
+    //- Шапка
+    include templates/partials/header
+
+    main
+
+      h1.visually-hidden Кузнецов Николай | Front-End разработчик.
+
+      //- Первый экран
+      include templates/partials/info
+
+      //- Биография
+      include templates/partials/biography
+
+      //- Портфолио
+      include templates/partials/portfolio
+
+      //- Мои навыки
+      include templates/partials/skills
+
+      //- Контакты
+      include templates/partials/contacts
+
+    //- Подвал
+    include templates/partials/footer
+
+  //- Модальное окно
+  include templates/partials/modal
+
+  //- Кнопка вверх
+  include templates/partials/up
+
+

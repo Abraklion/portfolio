@@ -1,0 +1,75 @@
+
+.burger {
+  display: inline-block;
+
+  width: 54px;
+  height: 54px;
+
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+
+  padding: 5px;
+
+  background-color: $bg-burger;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    width: 22px;
+    height: 2px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    margin: -1px 0 0 -11px;
+
+    background-color: $color-line;
+
+    box-shadow: 0 9px 0 0 $color-line,
+                0 -9px 0 0 $color-line;
+
+    transition: transform 0.1s linear, box-shadow 0.1s linear;
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  &--active{
+
+    &::before{
+      box-shadow: none;
+
+      transform: rotate(45deg);
+    }
+
+    &:after{
+      content: "";
+
+      width: 22px;
+      height: 2px;
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+
+      margin: -1px 0 0 -11px;
+
+      background-color: $color-line;
+
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (min-width: $viewport-md) {
+    display: none;
+  }
+}

@@ -1,0 +1,4 @@
+/venv/
+/core/__pycache__/
+/portfolio/__pycache__/
+/portfolio/migrations/

@@ -1,0 +1,29 @@
+{
+  "title" : "Контакты",
+
+  "form" : {
+    "title" : "Написать мне",
+    "name" : "Имя",
+    "email" : "Email",
+    "messages" : "Ваше предложение"
+  },
+
+  "contact" : {
+    "title" : "Какова твоя история?",
+    "subtitle" : "Всегда доступен для предложений, если появится подходящий проект. Не стесняйтесь обращаться ко мне.",
+    "list" : [
+      {
+        "name" : "abraklion@gmail.com",
+        "link" : "mailto:abraklion@gmail.com",
+        "icon" : "email-cont"
+      },
+      {
+        "name" : "+7 (919) 148 66 69",
+        "link" : "tel:+79191486669",
+        "icon" : "phone-cont"
+      }
+    ]
+  }
+
+
+}

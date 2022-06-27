@@ -1,0 +1,64 @@
+{
+  "name": "gulp-html-scss",
+  "version": "1.0.0",
+  "description": "Сборка работает на шаблонизаторе PUG и препроцессоре SCSS",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abraklion/gulp-pug-scss.git"
+  },
+  "keywords": [
+    "Сборка GULP",
+    "Сборка GULP SCSS",
+    "Сборка GULP PUG SCSS"
+  ],
+  "author": "Nikolay Kuznetsov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abraklion/gulp-pug-scss/issues"
+  },
+  "homepage": "https://github.com/Abraklion/gulp-pug-scss#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "dotenv": "^16.0.1",
+    "gulp": "^4.0.2",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-cssbeautify": "^3.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-format-html": "^1.2.5",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-load-plugins": "^2.0.6",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-tinypng-compress": "^1.2.5",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-uglify-es": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "jstransformer-markdown-it": "^2.1.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  }
+}

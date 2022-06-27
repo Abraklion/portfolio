@@ -1,0 +1,36 @@
+
+.logo {
+  display: inline-block;
+
+  padding: 3px;
+
+  background-color: $bg-logo;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+
+  color: $color-text-logo;
+
+  text-decoration: none;
+  text-align: center;
+
+  &::before {
+    content: $text-logo;
+
+    display: inline-block;
+
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+
+    text-shadow: 1px 0 1px rgba($border-color,$border-opacity),
+                 0 1px 1px rgba($border-color,$border-opacity),
+                 -1px 0 1px rgba($border-color,$border-opacity),
+                 0 -1px 1px rgba($border-color,$border-opacity);
+  }
+
+  &:focus {
+    outline-offset: -2px;
+  }
+}

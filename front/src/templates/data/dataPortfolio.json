@@ -1,0 +1,104 @@
+{
+  "title" : "Портфолио",
+
+  "tab" : [
+    {
+      "name": "Все",
+      "active": "portfolio__tab-link--active"
+    },
+    {
+      "name": "На заказ"
+    },
+    {
+      "name": "Для души"
+    }
+  ],
+
+  "preview" : [
+    {
+      "name": "Автолидер",
+      "category": "На заказ",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "Для души",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "Для души",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "Для души",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "Для души",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "На заказ",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "На заказ",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "На заказ",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "На заказ",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "На заказ",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "На заказ",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "На заказ",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    },
+    {
+      "name": "Автолидер",
+      "category": "На заказ",
+      "link" : "https://avtolider.bashkiria.ru",
+      "img" : "avtolider-preview"
+    }
+
+
+  ],
+  "still" : {
+    "title" : "Показать еще проекты",
+    "subtitle" : "На самом деле проектов гораздо больше!",
+    "btn" : "Показать"
+  }
+}

@@ -1,0 +1,43 @@
+
+section.biography#biography
+  .container
+    .biography__inner
+
+      h2.biography__title.title.title--align_left
+        span= jsonBiography.title
+
+      //- социальная информация
+      .biography__info
+        .biography__info-box
+
+          //- фото
+          .biography__img
+            picture
+              source(srcset=`assets/img/${jsonBiography.img}.webp, assets/img/${jsonBiography.img}@2x.webp 2x, assets/img/${jsonBiography.img}@3x.webp 3x`, type="image/webp")
+              img(src=`assets/img/${jsonBiography.img}.png`, srcset=`assets/img/${jsonBiography.img}@2x.png 2x, assets/img/${jsonBiography.img}@3x.png 3x`, loading="lazy", alt="Лицо Кузнецова Николая")
+
+          //- социальные сети
+          ul.biography__social
+            //- Цикл из dataBiography
+            each item in jsonBiography.social
+              li.biography__social-item
+                a(href=item.link, aria-label=item.name, title=item.name, rel="noopener", target="_blank").biography__social-link
+                  svg(aria-hidden="true", width="15", height="15").biography__social-svg
+                    use(xlink:href="assets/img/sprite.svg#" + item.icon)
+
+        p.biography__profession= jsonBiography.profession
+        p.biography__name= jsonBiography.name
+
+      //- текст
+      .biography__description
+        p.biography__text= jsonBiography.text.paragraph1
+        p.biography__text= jsonBiography.text.paragraph2
+        p.biography__text #[span Интересный факт:] #{jsonBiography.text.fact}
+
+        ul.biography__list
+          li.biography__item #[b Имя:] #{jsonBiography.text.list.name}
+          li.biography__item #[b Возраст:] #{jsonBiography.text.list.age}
+          li.biography__item #[b Телефон:] #[a(href="tel:+79173718952") #{jsonBiography.text.list.phone}]
+          li.biography__item #[b Почта:] #[a(href="mailto:abraklion@gmail.com") #{jsonBiography.text.list.email}]
+
+// /.biography

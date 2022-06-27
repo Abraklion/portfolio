@@ -1,0 +1,29 @@
+# Gulp
+front/node_modules/
+front/dist/
+front/.env
+
+# WebStorm
+/.idea/
+/.vscode/
+
+# Mac
+/.DS_Store/
+Thumbs.db
+
+#Python
+back/portfolio/__pycache__/
+back/portfolio/migrations/
+back/venv/
+back/media/
+*.pyc
+
+#Env
+.env.dev
+.env.dev.db
+.env.prod
+.env.prod.db
+
+#Script
+start_app.prod.sh
+start_app.prod2.sh

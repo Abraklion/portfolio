@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  front:
+    build: ./front
+    restart: unless-stopped
+    command: npm run dev
+    volumes:
+      - ./front/src/:/app/src/
+    networks:
+      - portfolio-docker-network
+
+  back:
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - media_volume_dev:/usr/src/app/media/
+      - ./back/core:/usr/src/app/core
+      - ./back/portfolio:/usr/src/app/portfolio
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - db
+    networks:
+      - portfolio-docker-network
+  
+  db:
+    image: postgres:13.0-alpine
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data/
+    env_file:
+      - ./.env.dev.db
+    networks:
+      - portfolio-docker-network
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.dev
+    ports:
+      - "80:80"
+    depends_on:
+      - back
+    networks:
+      - portfolio-docker-network
+
+volumes:
+  postgres_data_dev:
+  media_volume_dev:
+
+networks:
+  portfolio-docker-network:
+    driver: bridge

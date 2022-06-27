@@ -1,0 +1,29 @@
+{
+  "menu" : [
+    {
+      "name" : "Главная",
+      "link" : "#info",
+      "icon"  : "info"
+    },
+    {
+      "name" : "Биография",
+      "link" : "#biography",
+      "icon"  : "biography"
+    },
+    {
+      "name" : "Портфолио",
+      "link" : "#portfolio",
+      "icon"  : "portfolio"
+    },
+    {
+      "name" : "Мои навыки",
+      "link" : "#skills",
+      "icon"  : "skills"
+    },
+    {
+      "name" : "Контакты",
+      "link" : "#contacts",
+      "icon"  : "contacts"
+    }
+  ]
+}
